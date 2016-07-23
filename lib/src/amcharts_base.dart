@@ -6,15 +6,31 @@ library amcharts;
 
 import 'package:js/js.dart';
 
-@JS('AmSerialChart')
-class AmSerialChart {
-  external factory AmSerialChart();
+@JS('AmChart')
+abstract class AmChart {
+  external factory AmChart();
 
   external List get dataProvider;
   external set dataProvider(List v);
 
+  external write(v);
+}
+
+@JS('AmSerialChart')
+class AmSerialChart extends AmChart {
+  external factory AmSerialChart();
+
+  external num get angle;
+  external set angle(num v);
+
+  external CategoryAxis get categoryAxis;
+  external set categoryAxis(CategoryAxis v);
+
   external String get categoryField;
   external set categoryField(String v);
+
+  external num get depth3D;
+  external set depth3D(num v);
 
   external String get marginRight;
   external set marginRight(String v);
@@ -24,8 +40,6 @@ class AmSerialChart {
 
   external addGraph(v);
   external addChartScrollbar(v);
-
-  external write(v);
 }
 
 @JS('AmGraph')
@@ -35,20 +49,40 @@ class AmGraph {
   external String get id;
   external set id(String v);
 
-  external String get valueField;
-  external set valueField(String v);
-
-  external String get type;
-  external set type(String v);
-
-  external num get fillAlphas;
-  external set fillAlphas(num v);
+  external String get balloonText;
+  external set balloonText(String v);
 
   external String get bullet;
   external set bullet(String v);
 
+  external num get fillAlphas;
+  external set fillAlphas(num v);
+
   external String get lineColor;
   external set lineColor(String v);
+
+  external String get type;
+  external set type(String v);
+
+  external String get valueField;
+  external set valueField(String v);
+}
+
+@JS('CategoryAxis')
+class CategoryAxis {
+  external factory CategoryAxis();
+
+  external bool get autoGridCount;
+  external set autoGridCount(bool v);
+
+  external num get gridCount ;
+  external set gridCount (num v);
+
+  external String get gridPosition ;
+  external set gridPosition (String v);
+
+  external num get labelRotation ;
+  external set labelRotation (num v);
 }
 
 @JS('AmExport')
