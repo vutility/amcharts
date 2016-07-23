@@ -13,8 +13,8 @@ class AmSerialChart {
   external List get dataProvider;
   external set dataProvider(List v);
 
-  external String get categoryField ;
-  external set categoryField (String v);
+  external String get categoryField;
+  external set categoryField(String v);
 
   external addGraph(v);
   external write(v);
@@ -24,10 +24,13 @@ class AmSerialChart {
 class AmGraph {
   external factory AmGraph();
 
-  external String get valueField ;
-  external set valueField (String v);
+  external String get valueField;
+  external set valueField(String v);
 
-  external String get type  ;
-  external set type  (String v);
+  external String get type;
+  external set type(String v);
+
+  external num get fillAlphas;
+  external set fillAlphas(num v);
 }
 
