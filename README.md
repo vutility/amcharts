@@ -4,6 +4,8 @@ A Dart wrapper for the AmCharts JS library.
 
 ## Simple Usage Example
 
+An example based on the AmCharts tutorial: [Your first chart with amCharts](https://www.amcharts.com/tutorials/your-first-chart-with-amcharts/)
+
 ### Get Dependencies
    
     js: any
