@@ -35,7 +35,7 @@ A Dart wrapper for the AmCharts JS library.
 
 **lib/app_component.html**
 
-    <div id="chartdiv" style="width: 640px; height: 400px;"></div>
+    <div #chartView style="width: 640px; height: 400px;"></div>
 
 **lib/app_component.dart**
 
@@ -48,6 +48,8 @@ A Dart wrapper for the AmCharts JS library.
         templateUrl: 'app_component.html'
     )
     class AppComponent implements AfterViewInit {
+    
+      @ViewChild('chartView') ElementRef chartView;
     
       List<CountryData> chartData = [
         new CountryData(country: "USA", visits: 4252),
@@ -82,6 +84,6 @@ A Dart wrapper for the AmCharts JS library.
     
         chart.addGraph(graph);
     
-        chart.write('chartdiv');
+        chart.write(chartView.nativeElement);
       }
     }
