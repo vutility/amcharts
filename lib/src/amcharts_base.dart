@@ -17,7 +17,7 @@ class AmSerialChart {
   external set categoryField (String v);
 
   external addGraph(v);
-  external write(String elementName);
+  external write(v);
 }
 
 @JS('AmGraph')
