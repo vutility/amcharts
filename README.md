@@ -195,6 +195,10 @@ An example based on the AmCharts [Line Chart with Scroll and Zoom](https://www.a
           ..graph = graph
           ..scrollbarHeight = 40;
     
+        chart.export = new ExportOptions()
+          ..enabled = true
+          ..dateFormat = "YYYY-MM-DD HH:NN:SS";
+    
         chart
           ..categoryField = "date"
           ..mouseWheelZoomEnabled = true
@@ -203,7 +207,13 @@ An example based on the AmCharts [Line Chart with Scroll and Zoom](https://www.a
           ..autoMarginOffset = 20
           ..marginTop = 7;
     
+        chart.addListener("drawn", allowInterop((_) {
+          print('CHART DRAWN!');
+        }));
+    
         chart.write(chartView.nativeElement);
+    
+        chart.zoomToIndexes(750, 900);
       }
     
       List generateChartData() {

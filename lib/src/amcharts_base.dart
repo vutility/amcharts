@@ -6,6 +6,7 @@ library amcharts.charts;
 
 import 'package:js/js.dart';
 import 'amcharts_support.dart';
+import 'amcharts_options.dart';
 
 @JS('AmBalloon')
 class AmBalloon {
@@ -22,9 +23,13 @@ abstract class AmChart {
   external List get dataProvider;
   external set dataProvider(List v);
 
+  external ExportOptions get export;
+  external set export(ExportOptions v);
+
   external String get theme;
   external set theme(String v);
 
+  external addListener(String type, Function callback);
   external write(v);
 }
 
@@ -83,6 +88,9 @@ class AmSerialChart extends AmRectangularChart {
 
   external addGraph(v);
   external addChartScrollbar(v);
+  external zoomToCategoryValues(String start, String end);
+  external zoomToDates(DateTime start, DateTime end);
+  external zoomToIndexes(num start, num end);
 }
 
 @JS('AmGraph')

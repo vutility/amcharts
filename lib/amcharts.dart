@@ -6,3 +6,4 @@ library amcharts;
 
 export 'src/amcharts_base.dart';
 export 'src/amcharts_support.dart';
+export 'src/amcharts_options.dart';

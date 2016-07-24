@@ -43,6 +43,9 @@ class CategoryAxis extends AxisBase {
   external num get labelRotation ;
   external set labelRotation(num v);
 
+  external String get minPeriod ;
+  external set minPeriod(String v);
+
   external bool get parseDates;
   external set parseDates(bool v);
 }
@@ -50,6 +53,9 @@ class CategoryAxis extends AxisBase {
 @JS('ChartCursor')
 class ChartCursor {
   external factory ChartCursor();
+
+  external String get categoryBalloonDateFormat ;
+  external set categoryBalloonDateFormat(String v);
 
   external String get cursorPosition ;
   external set cursorPosition(String v);
@@ -213,18 +219,6 @@ class ChartScrollbar {
   //updateOnReleaseOnly	Boolean	false	Specifies if the chart should be updated while dragging/resizing the scrollbar or only at the moment when user releases mouse button.
   external bool get updateOnReleaseOnly;
   external set updateOnReleaseOnly(bool v);
-}
-
-@JS('ExportOptions')
-class ExportOptions {
-  external factory ExportOptions();
-
-  external bool get enabled;
-  external set enabled(bool v);
-
-  // "dateFormat": "YYYY-MM-DD HH:NN:SS"
-  external String get dateFormat;
-  external set dateFormat(String v);
 }
 
 @JS('GaugeAxis')
