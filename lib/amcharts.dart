@@ -6,6 +6,5 @@ library amcharts;
 
 export 'src/amcharts_base.dart';
 export 'src/amcharts_support.dart';
-export 'src/make_chart.dart';
 
 // TODO: Export any libraries intended for clients of this package.
