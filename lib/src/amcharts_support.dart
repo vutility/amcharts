@@ -1,4 +1,4 @@
-@JS()
+@JS('AmCharts')
 library amcharts.support;
 
 import 'package:js/js.dart';
@@ -27,6 +27,9 @@ abstract class AxisBase {
 
   external bool get minorGridEnabled;
   external set minorGridEnabled(bool v);
+
+  external String get title ;
+  external set title(String v);
 }
 
 @JS('CategoryAxis')
@@ -88,8 +91,5 @@ class ValueAxis extends AxisBase {
 
   external String get position ;
   external set position(String v);
-
-  external String get title ;
-  external set title(String v);
 }
 

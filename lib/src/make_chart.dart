@@ -75,7 +75,7 @@ class MakeChartOptions {
 @JS()
 @anonymous
 class ChartScrollbarOptions {
-  external ChartScrollbarOptions();
+  external factory ChartScrollbarOptions();
 
   external bool get autoGridCount;
   external set autoGridCount(bool v);
