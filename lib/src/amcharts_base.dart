@@ -2,9 +2,10 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 @JS('AmCharts')
-library amcharts;
+library amcharts.charts;
 
 import 'package:js/js.dart';
+import 'amcharts_support.dart';
 
 @JS('AmChart')
 abstract class AmChart {
@@ -61,6 +62,9 @@ class AmGraph {
   external String get lineColor;
   external set lineColor(String v);
 
+  external String get title;
+  external set title(String v);
+
   external String get type;
   external set type(String v);
 
@@ -68,33 +72,12 @@ class AmGraph {
   external set valueField(String v);
 }
 
-@JS('CategoryAxis')
-class CategoryAxis {
-  external factory CategoryAxis();
+@JS('AmLegend')
+class AmLegend {
+  external factory AmLegend();
 
-  external bool get autoGridCount;
-  external set autoGridCount(bool v);
-
-  external num get gridCount ;
-  external set gridCount (num v);
-
-  external String get gridPosition ;
-  external set gridPosition (String v);
-
-  external num get labelRotation ;
-  external set labelRotation (num v);
-}
-
-@JS('AmExport')
-class AmExport {
-  external factory AmExport();
-
-  external bool get enabled;
-  external set enabled(bool v);
-
-  // "dateFormat": "YYYY-MM-DD HH:NN:SS"
-  external String get dateFormat;
-  external set dateFormat(String v);
+  external bool get useGraphSettings;
+  external set useGraphSettings(bool v);
 }
 
 @JS('AmChartScrollbar')
