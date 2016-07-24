@@ -73,16 +73,26 @@ An example based on the AmCharts tutorial: [Your first chart with amCharts](http
         new CountryData(country: "Poland", visits: 328)
       ];
     
-      AppComponent();
-    
       ngAfterViewInit() {
-        var chart = new AmSerialChart();
-        chart.dataProvider = chartData;
-        chart.categoryField = "country";
+        AmSerialChart chart = new AmSerialChart()
+          ..dataProvider = chartData
+          ..categoryField = "country"
+          ..angle = 30
+          ..depth3D = 15;
     
-        var graph = new AmGraph();
-        graph.valueField = "visits";
-        graph.type = "column";
+        AmGraph graph = new AmGraph()
+          ..valueField = "visits"
+          ..type = "line"
+          ..fillAlphas = 0
+          ..balloonText = "[[category]]: <b>[[value]]</b>"
+          ..bullet = "round"
+          ..lineColor = "#8d1cc6";
+    
+        CategoryAxis categoryAxis = chart.categoryAxis
+          ..autoGridCount  = false
+          ..gridCount = chartData.length
+          ..gridPosition = "start"
+          ..labelRotation = 90;
     
         chart.addGraph(graph);
     

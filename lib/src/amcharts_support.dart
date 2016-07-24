@@ -10,6 +10,9 @@ abstract class AxisBase {
   external bool get autoGridCount;
   external set autoGridCount(bool v);
 
+  external num get axisAlpha ;
+  external set axisAlpha(num v);
+
   external String get axisColor ;
   external set axisColor(String v);
 
@@ -82,6 +85,9 @@ class Title {
 @JS('ValueAxis')
 class ValueAxis extends AxisBase {
   external factory ValueAxis();
+
+  external String get position ;
+  external set position(String v);
 
   external String get title ;
   external set title(String v);

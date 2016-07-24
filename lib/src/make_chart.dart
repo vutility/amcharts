@@ -8,9 +8,25 @@ import 'amcharts_support.dart';
 @JS()
 @anonymous
 class MakeChartOptions {
-  external MakeChartOptions();
+  external factory MakeChartOptions({
+    num autoMarginOffset,
+    CategoryAxis categoryAxis,
+    String categoryField,
+    ChartCursor chartCursor,
+    ChartScrollbarOptions chartScrollbar,
+    List dataProvider,
+    List<AmGraph> graphs,
+    AmLegend legendAxis,
+    num marginRight,
+    num marginTop,
+    bool mouseWheelZoomEnabled,
+    String theme,
+    List<Title> titles,
+    String type,
+    List<ValueAxis> valueAxes
+  });
 
-  external num get autoMarginOffsetRight;
+  external num get autoMarginOffset;
   external set autoMarginOffset(num v);
 
   external CategoryAxis get categoryAxis;
@@ -19,8 +35,11 @@ class MakeChartOptions {
   external String get categoryField;
   external set categoryField(String v);
 
-  external AmChartScrollbar get chartScrollbar;
-  external set chartScrollbar(AmChartScrollbar v);
+  external ChartCursor get chartCursor;
+  external set chartCursor(ChartCursor v);
+
+  external ChartScrollbarOptions get chartScrollbar;
+  external set chartScrollbar(ChartScrollbarOptions v);
 
   external List get dataProvider;
   external set dataProvider(List v);
@@ -53,3 +72,17 @@ class MakeChartOptions {
   external set valueAxes(List<ValueAxis> v);
 }
 
+@JS()
+@anonymous
+class ChartScrollbarOptions {
+  external ChartScrollbarOptions();
+
+  external bool get autoGridCount;
+  external set autoGridCount(bool v);
+
+  external String get graph;
+  external set graph(String v);
+
+  external num get scrollbarHeight;
+  external set scrollbarHeight(num v);
+}
