@@ -7,6 +7,14 @@ library amcharts.charts;
 import 'package:js/js.dart';
 import 'amcharts_support.dart';
 
+@JS('AmBalloon')
+class AmBalloon {
+  external factory AmBalloon();
+
+  external bool get drop;
+  external set drop(bool v);
+}
+
 @JS('AmChart')
 abstract class AmChart {
   external factory AmChart();
@@ -50,14 +58,26 @@ class AmGraph {
   external String get id;
   external set id(String v);
 
+  external AmBalloon get balloon;
+  external set balloon(AmBalloon v);
+
   external String get balloonText;
   external set balloonText(String v);
 
   external String get bullet;
   external set bullet(String v);
 
+  external num get bulletBorderAlpha;
+  external set bulletBorderAlpha(num v);
+
+  external String get bulletColor;
+  external set bulletColor(String v);
+
   external num get fillAlphas;
   external set fillAlphas(num v);
+
+  external num get hideBulletsCount;
+  external set hideBulletsCount(num v);
 
   external String get lineColor;
   external set lineColor(String v);
@@ -67,6 +87,9 @@ class AmGraph {
 
   external String get type;
   external set type(String v);
+
+  external bool get useLineColorForBulletBorder;
+  external set useLineColorForBulletBorder(bool v);
 
   external String get valueField;
   external set valueField(String v);
