@@ -2,7 +2,6 @@
 library amcharts.support;
 
 import 'package:js/js.dart';
-import 'amcharts_base.dart';
 
 @JS('AxisBase')
 abstract class AxisBase {

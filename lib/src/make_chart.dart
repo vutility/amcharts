@@ -51,6 +51,5 @@ class MakeChartOptions {
 
   external List<ValueAxis> get valueAxes;
   external set valueAxes(List<ValueAxis> v);
-
 }
 

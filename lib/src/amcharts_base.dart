@@ -6,6 +6,10 @@ library amcharts.charts;
 
 import 'package:js/js.dart';
 import 'amcharts_support.dart';
+import 'make_chart.dart';
+
+@JS("makeChart")
+external AmChart makeChart(element, MakeChartOptions);
 
 @JS('AmBalloon')
 class AmBalloon {
