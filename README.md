@@ -137,6 +137,7 @@ An example based on the AmCharts [Line Chart with Scroll and Zoom](https://www.a
 **lib/app_component.dart**
 
     import 'dart:math';
+    import "package:js/js.dart";
     
     import 'package:angular2/core.dart';
     import 'package:amcharts/amcharts.dart';
