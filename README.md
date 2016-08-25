@@ -3,10 +3,21 @@
 A Dart wrapper for the AmCharts JS library.
 
 ## Installing
+
+### Pubspec
    
     js: any
     amcharts:
-      path: path/to/amcharts
+      git: git://github.com/vutility/amcharts.git
+
+### Example JS Imports
+
+**web/index.html**
+
+    <script src="amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+    <script src="amcharts/amcharts/serial.js" type="text/javascript"></script>
+    <script src="amcharts/amcharts/pie.js" type="text/javascript"></script>
+
 
 ## Example 1
 
