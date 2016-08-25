@@ -236,3 +236,70 @@ An example based on the AmCharts [Line Chart with Scroll and Zoom](https://www.a
       }
     }
 
+## Example 3
+
+An example based on the AmCharts [Simple Pie Chart demo](https://www.amcharts.com/demos/simple-pie-chart/).
+
+
+### Create Data Class
+
+**lib/interop/chart_data.dart**
+
+    @JS()
+    @anonymous
+    class LitreData {
+      external factory LitreData({String country, num litres});
+    
+      external String get country;
+      external set country(String v);
+    
+      external num get visits;
+      external set litres(num v);
+    }
+
+### Create Chart
+
+**lib/app_component.html**
+
+    <div #chartView style="width: 100%; height: 500px; font-size: 11px;"></div>
+
+**lib/app_component.dart**
+
+    import 'package:angular2/core.dart';
+    import 'package:amcharts/amcharts.dart';
+    
+    import 'interop/chart_data.dart';
+    
+    @Component(selector: 'my-app',
+        templateUrl: 'app_component.html'
+    )
+    class AppComponent implements AfterViewInit {
+    
+      @ViewChild('chartView') ElementRef chartView;
+    
+      List<LitreData> chartData = [
+        new LitreData(country: "Lithuania", litres: 501.9),
+        new LitreData(country: "Czech Republic", litres: 301.9),
+        new LitreData(country: "Ireland", litres: 201.1),
+        new LitreData(country: "Germany", litres: 165.8),
+        new LitreData(country: "Australia", litres: 139.9),
+        new LitreData(country: "Austria", litres: 128.3),
+        new LitreData(country: "UK", litres: 99),
+        new LitreData(country: "Belgium", litres: 60),
+        new LitreData(country: "The Netherlands", litres: 50)
+      ];
+    
+      ngAfterViewInit() {
+        AmBalloon balloon = new AmBalloon()
+          ..fixedPosition = true;
+    
+        AmPieChart chart = new AmPieChart()
+          ..dataProvider = chartData
+          ..theme = "light"
+          ..valueField = "litres"
+          ..titleField = "country"
+          ..balloon = balloon;
+    
+        chart.write(chartView.nativeElement);
+      }
+    }

@@ -47,58 +47,6 @@ abstract class AmCoordinateChart extends AmChart {
   external set valueAxes(List<ValueAxis> v);
 }
 
-@JS('AmRectangularChart')
-abstract class AmRectangularChart extends AmCoordinateChart {
-  external factory AmRectangularChart();
-
-  external num get angle;
-  external set angle(num v);
-
-  external num get autoMarginOffset;
-  external set autoMarginOffset(num v);
-
-  external ChartCursor get chartCursor;
-  external set chartCursor(ChartCursor v);
-
-  external ChartScrollbar get chartScrollbar;
-  external set chartScrollbar(ChartScrollbar v);
-
-  external num get depth3D;
-  external set depth3D(num v);
-
-  external num get marginBottom;
-  external set marginBottom(num v);
-
-  external num get marginLeft;
-  external set marginLeft(num v);
-
-  external num get marginRight;
-  external set marginRight(num v);
-
-  external num get marginTop;
-  external set marginTop(num v);
-}
-
-@JS('AmSerialChart')
-class AmSerialChart extends AmRectangularChart {
-  external factory AmSerialChart();
-
-  external CategoryAxis get categoryAxis;
-  external set categoryAxis(CategoryAxis v);
-
-  external String get categoryField;
-  external set categoryField(String v);
-
-  external bool get mouseWheelZoomEnabled;
-  external set mouseWheelZoomEnabled(bool v);
-
-  external addGraph(v);
-  external addChartScrollbar(v);
-  external zoomToCategoryValues(String start, String end);
-  external zoomToDates(DateTime start, DateTime end);
-  external zoomToIndexes(num start, num end);
-}
-
 @JS('AmGraph')
 class AmGraph {
   external factory AmGraph();
@@ -151,6 +99,66 @@ class AmLegend {
   external set useGraphSettings(bool v);
 }
 
+@JS('AmPieChart')
+class AmPieChart extends AmSlicedChart {
+  external factory AmPieChart();
+
+  external String get balloonText;
+  external set balloonText(String v);
+}
+
+@JS('AmRectangularChart')
+abstract class AmRectangularChart extends AmCoordinateChart {
+  external factory AmRectangularChart();
+
+  external num get angle;
+  external set angle(num v);
+
+  external num get autoMarginOffset;
+  external set autoMarginOffset(num v);
+
+  external ChartCursor get chartCursor;
+  external set chartCursor(ChartCursor v);
+
+  external ChartScrollbar get chartScrollbar;
+  external set chartScrollbar(ChartScrollbar v);
+
+  external num get depth3D;
+  external set depth3D(num v);
+
+  external num get marginBottom;
+  external set marginBottom(num v);
+
+  external num get marginLeft;
+  external set marginLeft(num v);
+
+  external num get marginRight;
+  external set marginRight(num v);
+
+  external num get marginTop;
+  external set marginTop(num v);
+}
+
+@JS('AmSerialChart')
+class AmSerialChart extends AmRectangularChart {
+  external factory AmSerialChart();
+
+  external CategoryAxis get categoryAxis;
+  external set categoryAxis(CategoryAxis v);
+
+  external String get categoryField;
+  external set categoryField(String v);
+
+  external bool get mouseWheelZoomEnabled;
+  external set mouseWheelZoomEnabled(bool v);
+
+  external addGraph(v);
+  external addChartScrollbar(v);
+  external zoomToCategoryValues(String start, String end);
+  external zoomToDates(DateTime start, DateTime end);
+  external zoomToIndexes(num start, num end);
+}
+
 @JS('AmSlicedChart')
 abstract class AmSlicedChart extends AmChart {
   external factory AmSlicedChart();
@@ -160,12 +168,4 @@ abstract class AmSlicedChart extends AmChart {
 
   external String get valueField;
   external set valueField(String v);
-}
-
-@JS('AmPieChart')
-class AmPieChart extends AmSlicedChart {
-  external factory AmPieChart();
-
-  external String get balloonText;
-  external set balloonText(String v);
 }
