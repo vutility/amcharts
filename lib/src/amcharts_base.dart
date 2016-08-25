@@ -14,11 +14,17 @@ class AmBalloon {
 
   external bool get drop;
   external set drop(bool v);
+
+  external bool get fixedPosition;
+  external set fixedPosition(bool v);
 }
 
 @JS('AmChart')
 abstract class AmChart {
   external factory AmChart();
+
+  external AmBalloon get balloon;
+  external set balloon(AmBalloon v);
 
   external List get dataProvider;
   external set dataProvider(List v);
@@ -143,4 +149,23 @@ class AmLegend {
 
   external bool get useGraphSettings;
   external set useGraphSettings(bool v);
+}
+
+@JS('AmSlicedChart')
+abstract class AmSlicedChart extends AmChart {
+  external factory AmSlicedChart();
+
+  external String get titleField;
+  external set titleField(String v);
+
+  external String get valueField;
+  external set valueField(String v);
+}
+
+@JS('AmPieChart')
+class AmPieChart extends AmSlicedChart {
+  external factory AmPieChart();
+
+  external String get balloonText;
+  external set balloonText(String v);
 }
