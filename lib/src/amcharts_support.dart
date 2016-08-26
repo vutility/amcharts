@@ -31,6 +31,15 @@ abstract class AxisBase {
 
   external String get title ;
   external set title(String v);
+
+  external String get gridColor ;
+  external set gridColor(String v);
+
+  external num get gridAlpha ;
+  external set gridAlpha(num v);
+
+  external num get tickLength ;
+  external set tickLength(num v);
 }
 
 @JS('CategoryAxis')
@@ -45,6 +54,9 @@ class CategoryAxis extends AxisBase {
 
   external bool get parseDates;
   external set parseDates(bool v);
+
+  external String get tickPosition;
+  external set tickPosition(String v);
 }
 
 @JS('ChartCursor')
@@ -62,6 +74,15 @@ class ChartCursor {
 
   external bool get oneBalloonOnly;
   external set oneBalloonOnly(bool v);
+
+  external bool get categoryBalloonEnabled;
+  external set categoryBalloonEnabled(bool v);
+
+  external bool get zoomable;
+  external set zoomable(bool v);
+
+  external num get cursorAlpha;
+  external set cursorAlpha(num v);
 }
 
 @JS('ChartScrollbar')

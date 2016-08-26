@@ -50,6 +50,15 @@ abstract class AmCoordinateChart extends AmChart {
 
   external List<ValueAxis> get valueAxes;
   external set valueAxes(List<ValueAxis> v);
+
+  external bool get gridAboveGraphs;
+  external set gridAboveGraphs(bool v);
+
+  external num get startDuration;
+  external set startDuration(num v);
+
+  external List<AmChart> get graphs;
+  external set graphs(List<AmChart> v);
 }
 
 @JS('AmGraph')
@@ -94,6 +103,9 @@ class AmGraph {
 
   external String get valueField;
   external set valueField(String v);
+
+  external num get lineAlpha;
+  external set lineAlpha(num v);
 }
 
 @JS('AmLegend')
