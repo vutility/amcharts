@@ -35,8 +35,13 @@ abstract class AmChart {
   external String get theme;
   external set theme(String v);
 
-  external addListener(String type, Function callback);
-  external write(v);
+  external addListener(String type, Function handler);
+  external clear();
+  external invalidateSize();
+  external removeListener(chart, String type, Function handler);
+  external validateData();
+  external validateNow(bool validateData, bool skipEvents);
+  external write(container);
 }
 
 @JS('AmCoordinateChart')

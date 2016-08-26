@@ -40,9 +40,6 @@ class CategoryAxis extends AxisBase {
   external String get gridPosition ;
   external set gridPosition(String v);
 
-  external num get labelRotation ;
-  external set labelRotation(num v);
-
   external String get minPeriod ;
   external set minPeriod(String v);
 
