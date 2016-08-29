@@ -35,6 +35,18 @@ abstract class AmChart {
   external String get theme;
   external set theme(String v);
 
+  external bool get addClassNames;
+  external set addClassNames(bool v);
+
+  external String get backgroundColor;
+  external set backgroundColor(String v);
+
+  external String get borderColor;
+  external set borderColor(String v);
+
+  external String get color;
+  external set color(String v);
+
   external addListener(String type, Function handler);
   external clear();
   external invalidateSize();
@@ -59,6 +71,9 @@ abstract class AmCoordinateChart extends AmChart {
 
   external List<AmChart> get graphs;
   external set graphs(List<AmChart> v);
+
+  external List<String> get colors;
+  external set colors(List<String> v);
 }
 
 @JS('AmGraph')
@@ -106,6 +121,9 @@ class AmGraph {
 
   external num get lineAlpha;
   external set lineAlpha(num v);
+
+  external String get colorField;
+  external set colorField(String v);
 }
 
 @JS('AmLegend')
@@ -154,6 +172,13 @@ abstract class AmRectangularChart extends AmCoordinateChart {
 
   external num get marginTop;
   external set marginTop(num v);
+
+  external String get plotAreaBorderColor;
+  external set plotAreaBorderColor(String v);
+
+  //TODO figure out how to accept either a String or a List as this allows for a single color or an array of colors for a gradient
+  external String get plotAreaFillColors;
+  external set plotAreaFillColors(String v);
 }
 
 @JS('AmSerialChart')
@@ -185,4 +210,13 @@ abstract class AmSlicedChart extends AmChart {
 
   external String get valueField;
   external set valueField(String v);
+
+  external String get classNameField;
+  external set classNameField(String v);
+
+  external String get colorField;
+  external set colorField(String v);
+
+  external String get labelColorField;
+  external set labelColorField(String v);
 }
