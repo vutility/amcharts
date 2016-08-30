@@ -124,6 +124,9 @@ class AmGraph {
 
   external String get colorField;
   external set colorField(String v);
+
+  external String get fillColorsField;
+  external set fillColorsField(String v);
 }
 
 @JS('AmLegend')
@@ -140,6 +143,19 @@ class AmPieChart extends AmSlicedChart {
 
   external String get balloonText;
   external set balloonText(String v);
+
+  //Item type is shown as Number/String https://docs.amcharts.com/3/javascriptcharts/AmPieChart#pullOutRadius
+  external get pullOutRadius;
+  external set pullOutRadius(v);
+
+  external num get depth3D;
+  external set depth3D(num v);
+
+  external num get angle;
+  external set angle(num v);
+
+  external num get outlineAlpha;
+  external set outlineAlpha(num v);
 }
 
 @JS('AmRectangularChart')
@@ -176,9 +192,11 @@ abstract class AmRectangularChart extends AmCoordinateChart {
   external String get plotAreaBorderColor;
   external set plotAreaBorderColor(String v);
 
-  //TODO figure out how to accept either a String or a List as this allows for a single color or an array of colors for a gradient
-  external String get plotAreaFillColors;
-  external set plotAreaFillColors(String v);
+  //Seems like it can be a String or a List https://docs.amcharts.com/3/javascriptcharts/AmRectangularChart#plotAreaFillColors
+  external get plotAreaFillColors;
+  external set plotAreaFillColors(v);
+
+
 }
 
 @JS('AmSerialChart')
@@ -219,4 +237,34 @@ abstract class AmSlicedChart extends AmChart {
 
   external String get labelColorField;
   external set labelColorField(String v);
+
+  external num get marginBottom;
+  external set marginBottom(num v);
+
+  external num get marginLeft;
+  external set marginLeft(num v);
+
+  external num get marginRight;
+  external set marginRight(num v);
+
+  external num get marginTop;
+  external set marginTop(num v);
+
+  external bool get labelsEnabled;
+  external set labelsEnabled(bool v);
+
+  external num get alpha;
+  external set alpha(num v);
+}
+
+@JS('AmAngularGauge')
+abstract class AmAngularGauge extends AmChart {
+  external factory AmAngularGauge();
+
+  external List get axes;
+  external set axes(List v);
+
+  external List get arrows;
+  external set arrows(List v);
+
 }
