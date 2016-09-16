@@ -395,6 +395,9 @@ class GaugeAxis {
 
   external num get valueInterval;
   external set valueInterval(num v);
+
+  external setBottomText(String type);
+  external setTopText(String type);
 }
 
 @JS('GaugeBand')

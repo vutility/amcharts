@@ -20,6 +20,9 @@ class AmAngularGauge extends AmChart {
 
   external List<GaugeAxis> get axes;
   external set axes(List<GaugeAxis> v);
+
+  external addAxis(GaugeAxis axis);
+  external addArrow(GaugeArrow arrow);
 }
 
 @JS('AmBalloon')
