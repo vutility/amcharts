@@ -8,6 +8,20 @@ import 'package:js/js.dart';
 import 'amcharts_support.dart';
 import 'amcharts_options.dart';
 
+@JS('AmAngularGauge')
+class AmAngularGauge extends AmChart {
+  external factory AmAngularGauge();
+
+  external bool get adjustSize;
+  external set adjustSize(bool v);
+
+  external List<GaugeArrow> get arrows;
+  external set arrows(List<GaugeArrow> v);
+
+  external List<GaugeAxis> get axes;
+  external set axes(List<GaugeAxis> v);
+}
+
 @JS('AmBalloon')
 class AmBalloon {
   external factory AmBalloon();
@@ -22,6 +36,9 @@ class AmBalloon {
 @JS('AmChart')
 abstract class AmChart {
   external factory AmChart();
+
+  external List<Label> get allLabels;
+  external set allLabels(List<Label> v);
 
   external AmBalloon get balloon;
   external set balloon(AmBalloon v);
@@ -46,6 +63,9 @@ abstract class AmChart {
 
   external String get color;
   external set color(String v);
+
+  external List<Title> get titles;
+  external set titles(List<Title> v);
 
   external addListener(String type, Function handler);
   external clear();
@@ -255,16 +275,4 @@ abstract class AmSlicedChart extends AmChart {
 
   external num get alpha;
   external set alpha(num v);
-}
-
-@JS('AmAngularGauge')
-abstract class AmAngularGauge extends AmChart {
-  external factory AmAngularGauge();
-
-  external List get axes;
-  external set axes(List v);
-
-  external List get arrows;
-  external set arrows(List v);
-
 }

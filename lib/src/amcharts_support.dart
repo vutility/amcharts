@@ -239,9 +239,238 @@ class ChartScrollbar {
   external set updateOnReleaseOnly(bool v);
 }
 
+@JS('GaugeArrow')
+class GaugeArrow {
+  external factory GaugeArrow();
+
+  external num get value;
+  external set value(num v);
+}
+
 @JS('GaugeAxis')
 class GaugeAxis {
   external factory GaugeAxis();
+
+
+  external num get axisAlpha;
+  external set axisAlpha(num v);
+
+  external String get axisColor;
+  external set axisColor(String v);
+
+  external num get axisThickness;
+  external set axisThickness(num v);
+
+  external num get bandAlpha;
+  external set bandAlpha(num v);
+
+  external List<num> get bandGradientRatio;
+  external set bandGradientRatio(List<num> v);
+
+  external num get bandOutlineAlpha;
+  external set bandOutlineAlpha(num v);
+
+  external String get bandOutlineColor;
+  external set bandOutlineColor(String v);
+
+  external num get bandOutlineThickness;
+  external set bandOutlineThickness(num v);
+
+  external List<GaugeBand> get bands;
+  external set bands(List<GaugeBand> v);
+
+  external String get bottomText;
+  external set bottomText(String v);
+
+  external bool get bottomTextBold;
+  external set bottomTextBold(bool v);
+
+  external String get bottomTextColor;
+  external set bottomTextColor(String v);
+
+  external num get bottomTextFontSize;
+  external set bottomTextFontSize(num v);
+
+  external num get bottomTextYOffset;
+  external set bottomTextYOffset(num v);
+
+  external get centerX;
+  external set centerX(v);
+
+  external get centerY;
+  external set centerY(v);
+
+  external String get color;
+  external set color(String v);
+
+  external num get endAngle;
+  external set endAngle(num v);
+
+  external num get endValue;
+  external set endValue(num v);
+
+  external num get fontSize;
+  external set fontSize(num v);
+
+  external num get gridCount;
+  external set gridCount(num v);
+
+  external bool get gridInside;
+  external set gridInside(bool v);
+
+  external get id;
+  external set id(v);
+
+  external bool get inside;
+  external set inside(bool v);
+
+  external num get labelFrequency;
+  external set labelFrequency(num v);
+
+  external get labelFunction;
+  external set labelFunction(v);
+
+  external num get labelOffset;
+  external set labelOffset(num v);
+
+  external bool get labelsEnabled;
+  external set labelsEnabled(bool v);
+
+  external num get minorTickInterval;
+  external set minorTickInterval(num v);
+
+  external num get minorTickLength;
+  external set minorTickLength(num v);
+
+  external get radius;
+  external set radius(v);
+
+  external bool get showFirstLabel;
+  external set showFirstLabel(bool v);
+
+  external bool get showLastLabel;
+  external set showLastLabel(bool v);
+
+  external num get startAngle;
+  external set startAngle(num v);
+
+  external num get startValue;
+  external set startValue(num v);
+
+  external num get tickAlpha;
+  external set tickAlpha(num v);
+
+  external String get tickColor;
+  external set tickColor(String v);
+
+  external num get tickLength;
+  external set tickLength(num v);
+
+  external num get tickThickness;
+  external set tickThickness(num v);
+
+  external String get topText;
+  external set topText(String v);
+
+  external bool get topTextBold;
+  external set topTextBold(bool v);
+
+  external String get topTextColor;
+  external set topTextColor(String v);
+
+  external num get topTextFontSize;
+  external set topTextFontSize(num v);
+
+  external num get topTextYOffset;
+  external set topTextYOffset(num v);
+
+  external String get unit;
+  external set unit(String v);
+
+  external String get unitPosition;
+  external set unitPosition(String v);
+
+  external bool get usePrefixes;
+  external set usePrefixes(bool v);
+
+  external num get valueInterval;
+  external set valueInterval(num v);
+}
+
+@JS('GaugeBand')
+class GaugeBand {
+  external factory GaugeBand();
+
+  external num get alpha;
+  external set alpha(num v);
+
+  external String get balloonText;
+  external set balloonText(String v);
+
+  external String get color;
+  external set color(String v);
+
+  external num get endValue;
+  external set endValue(num v);
+
+  external List<num> get gradientRatio;
+  external set gradientRatio(List<num> v);
+
+  external String get id;
+  external set id(String v);
+
+  external get innerRadius;
+  external set innerRadius(v);
+
+  external get radius;
+  external set radius(v);
+
+  external num get startValue;
+  external set startValue(num v);
+
+  external String get url;
+  external set url(String v);
+}
+
+@JS('Label')
+class Label {
+  external factory Label();
+
+  external String get align ;
+  external set align(String v);
+
+  external num get alpha;
+  external set alpha(num v);
+
+  external bool get bold;
+  external set bold(bool v);
+
+  external String get color ;
+  external set color(String v);
+
+  external String get id ;
+  external set id(String v);
+
+  external num get rotation;
+  external set rotation(num v);
+
+  external num get size;
+  external set size(num v);
+
+  external num get tabIndex;
+  external set tabIndex(num v);
+
+  external String get text ;
+  external set text(String v);
+
+  external String get url ;
+  external set url(String v);
+
+  external get x;
+  external set x(v);
+
+  external get y;
+  external set y(v);
 }
 
 @JS('Title')

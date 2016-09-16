@@ -2,7 +2,6 @@
 library amcharts.options;
 
 import 'package:js/js.dart';
-import 'amcharts_base.dart';
 
 @JS()
 @anonymous
