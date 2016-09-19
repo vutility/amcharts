@@ -97,6 +97,8 @@ abstract class AmCoordinateChart extends AmChart {
 
   external List<String> get colors;
   external set colors(List<String> v);
+
+  external addValueAxis(ValueAxis axis);
 }
 
 @JS('AmGraph')
