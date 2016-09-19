@@ -264,5 +264,8 @@ class ValueAxis extends AxisBase {
 
   external num get minimum;
   external set minimum(num v);
+
+  external num get maximum;
+  external set maximum(num v);
 }
 
