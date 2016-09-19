@@ -259,7 +259,10 @@ class Title {
 class ValueAxis extends AxisBase {
   external factory ValueAxis();
 
-  external String get position ;
+  external String get position;
   external set position(String v);
+
+  external num get minimum;
+  external set minimum(num v);
 }
 
