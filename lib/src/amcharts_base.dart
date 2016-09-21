@@ -69,8 +69,8 @@ abstract class AmCoordinateChart extends AmChart {
   external num get startDuration;
   external set startDuration(num v);
 
-  external List<AmChart> get graphs;
-  external set graphs(List<AmChart> v);
+  external List<AmGraph> get graphs;
+  external set graphs(List<AmGraph> v);
 
   external List<String> get colors;
   external set colors(List<String> v);
@@ -198,7 +198,8 @@ abstract class AmRectangularChart extends AmCoordinateChart {
   external get plotAreaFillColors;
   external set plotAreaFillColors(v);
 
-
+  external num get plotAreaFillAlphas;
+  external set plotAreaFillAlphas(num v);
 }
 
 @JS('AmSerialChart')

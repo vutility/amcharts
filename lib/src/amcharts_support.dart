@@ -267,5 +267,11 @@ class ValueAxis extends AxisBase {
 
   external num get maximum;
   external set maximum(num v);
+
+  external String get stackType;
+  external set stackType(String v);
+
+  external String get unit;
+  external set unit(String v);
 }
 
