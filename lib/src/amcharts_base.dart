@@ -77,6 +77,7 @@ abstract class AmChart {
   external validateData();
   external validateNow(bool validateData, bool skipEvents);
   external write(container);
+  external addLegend(AmLegend legend, [v]);
 }
 
 @JS('AmCoordinateChart')
@@ -152,6 +153,12 @@ class AmGraph {
 
   external String get fillColorsField;
   external set fillColorsField(String v);
+
+  external ValueAxis get valueAxis;
+  external set valueAxis(ValueAxis v);
+
+  external num get bulletBorderThickness;
+  external set bulletBorderThickness(num v);
 }
 
 @JS('AmLegend')
@@ -160,6 +167,18 @@ class AmLegend {
 
   external bool get useGraphSettings;
   external set useGraphSettings(bool v);
+
+  external num get marginLeft;
+  external set marginLeft(num v);
+
+  external num get marginRight;
+  external set marginRight(num v);
+
+  external num get marginTop;
+  external set marginTop(num v);
+
+  external num get marginBottom;
+  external set marginBottom(num v);
 }
 
 @JS('AmPieChart')
@@ -223,6 +242,8 @@ abstract class AmRectangularChart extends AmCoordinateChart {
 
   external num get plotAreaFillAlphas;
   external set plotAreaFillAlphas(num v);
+
+  external addChartCursor(ChartCursor v);
 }
 
 @JS('AmSerialChart')
