@@ -57,6 +57,9 @@ class CategoryAxis extends AxisBase {
 
   external String get tickPosition;
   external set tickPosition(String v);
+
+  external bool get twoLineMode;
+  external set twoLineMode(bool v);
 }
 
 @JS('ChartCursor')
@@ -83,6 +86,12 @@ class ChartCursor {
 
   external num get cursorAlpha;
   external set cursorAlpha(num v);
+
+  external bool get fullWidth;
+  external set fullWidth(bool v);
+
+  external bool get valueLineBalloonEnabled;
+  external set valueLineBalloonEnabled(bool v);
 }
 
 @JS('ChartScrollbar')
@@ -273,5 +282,14 @@ class ValueAxis extends AxisBase {
 
   external String get unit;
   external set unit(String v);
+
+  external String get id;
+  external set id(String v);
+
+  external num get axisThickness;
+  external set axisThickness(num v);
+
+  external num get offset;
+  external set offset(num v);
 }
 
