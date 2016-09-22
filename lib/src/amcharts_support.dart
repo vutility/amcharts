@@ -254,6 +254,8 @@ class GaugeArrow {
 
   external num get value;
   external set value(num v);
+
+  external setValue(num value);
 }
 
 @JS('GaugeAxis')

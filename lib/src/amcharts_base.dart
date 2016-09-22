@@ -78,6 +78,7 @@ abstract class AmChart {
   external validateNow(bool validateData, bool skipEvents);
   external write(container);
   external addLegend(AmLegend legend, [v]);
+  external addTitle(String text, [num size, String color, num alpha, bool bold]); //Guessed on item types for some of these as it wasn't indicated
 }
 
 @JS('AmCoordinateChart')
