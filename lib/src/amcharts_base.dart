@@ -152,6 +152,12 @@ class AmGraph {
   external String get colorField;
   external set colorField(String v);
 
+  external String get lineColorField;
+  external set lineColorField(String v);
+
+  external String get fillColors;
+  external set fillColors(String v);
+
   external String get fillColorsField;
   external set fillColorsField(String v);
 
