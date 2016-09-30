@@ -23,8 +23,14 @@ abstract class AxisBase {
   external num get gridCount ;
   external set gridCount(num v);
 
+  external bool get inside;
+  external set inside(bool v);
+
   external num get labelRotation ;
   external set labelRotation(num v);
+
+  external num get minorGridAlpha ;
+  external set minorGridAlpha(num v);
 
   external bool get minorGridEnabled;
   external set minorGridEnabled(bool v);

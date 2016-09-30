@@ -122,17 +122,47 @@ class AmGraph {
   external num get bulletBorderAlpha;
   external set bulletBorderAlpha(num v);
 
+  external String get bulletBorderColor;
+  external set bulletBorderColor(String v);
+
+  external num get bulletBorderThickness;
+  external set bulletBorderThickness(num v);
+
   external String get bulletColor;
   external set bulletColor(String v);
+
+  external String get bulletSizeField;
+  external set bulletSizeField(String v);
+
+  external num get bulletSize;
+  external set bulletSize(num v);
+
+  external String get colorField;
+  external set colorField(String v);
 
   external num get fillAlphas;
   external set fillAlphas(num v);
 
+  external String get fillColors;
+  external set fillColors(String v);
+
+  external String get fillColorsField;
+  external set fillColorsField(String v);
+
   external num get hideBulletsCount;
   external set hideBulletsCount(num v);
 
+  external num get lineAlpha;
+  external set lineAlpha(num v);
+
   external String get lineColor;
   external set lineColor(String v);
+
+  external String get lineColorField;
+  external set lineColorField(String v);
+
+  external num get lineThickness;
+  external set lineThickness(num v);
 
   external String get title;
   external set title(String v);
@@ -146,26 +176,8 @@ class AmGraph {
   external String get valueField;
   external set valueField(String v);
 
-  external num get lineAlpha;
-  external set lineAlpha(num v);
-
-  external String get colorField;
-  external set colorField(String v);
-
-  external String get lineColorField;
-  external set lineColorField(String v);
-
-  external String get fillColors;
-  external set fillColors(String v);
-
-  external String get fillColorsField;
-  external set fillColorsField(String v);
-
   external ValueAxis get valueAxis;
   external set valueAxis(ValueAxis v);
-
-  external num get bulletBorderThickness;
-  external set bulletBorderThickness(num v);
 }
 
 @JS('AmLegend')
@@ -262,6 +274,9 @@ class AmSerialChart extends AmRectangularChart {
 
   external String get categoryField;
   external set categoryField(String v);
+
+  external String get dataDateFormat;
+  external set dataDateFormat(String v);
 
   external bool get mouseWheelZoomEnabled;
   external set mouseWheelZoomEnabled(bool v);
