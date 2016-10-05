@@ -119,6 +119,9 @@ class AmGraph {
   external String get bullet;
   external set bullet(String v);
 
+  external num get bulletAlpha;
+  external set bulletAlpha(num v);
+
   external num get bulletBorderAlpha;
   external set bulletBorderAlpha(num v);
 
