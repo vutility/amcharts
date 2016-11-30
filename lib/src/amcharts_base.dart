@@ -40,11 +40,23 @@ class AmBalloon {
 abstract class AmChart {
   external factory AmChart();
 
+  external bool get addClassNames;
+  external set addClassNames(bool v);
+
   external List<Label> get allLabels;
   external set allLabels(List<Label> v);
 
+  external String get backgroundColor;
+  external set backgroundColor(String v);
+
   external AmBalloon get balloon;
   external set balloon(AmBalloon v);
+
+  external String get borderColor;
+  external set borderColor(String v);
+
+  external String get color;
+  external set color(String v);
 
   external List get dataProvider;
   external set dataProvider(List v);
@@ -52,20 +64,11 @@ abstract class AmChart {
   external ExportOptions get export;
   external set export(ExportOptions v);
 
+  external ResponsiveOptions get responsive;
+  external set responsive(ResponsiveOptions v);
+
   external String get theme;
   external set theme(String v);
-
-  external bool get addClassNames;
-  external set addClassNames(bool v);
-
-  external String get backgroundColor;
-  external set backgroundColor(String v);
-
-  external String get borderColor;
-  external set borderColor(String v);
-
-  external String get color;
-  external set color(String v);
 
   external List<Title> get titles;
   external set titles(List<Title> v);
