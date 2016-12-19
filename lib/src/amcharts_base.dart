@@ -268,6 +268,12 @@ abstract class AmRectangularChart extends AmCoordinateChart {
   external num get plotAreaFillAlphas;
   external set plotAreaFillAlphas(num v);
 
+  external bool get rotate;
+  external set rotate(bool v);
+
+  external num get columnWidth;
+  external set columnWidth(num v);
+
   external addChartCursor(ChartCursor v);
 }
 
@@ -330,4 +336,10 @@ abstract class AmSlicedChart extends AmChart {
 
   external num get alpha;
   external set alpha(num v);
+
+  external String get innerRadius;
+  external set innerRadius(String v);
+
+  external String get pullOutRadius;
+  external set pullOutRadius(String v);
 }
