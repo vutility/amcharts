@@ -81,6 +81,7 @@ abstract class AmChart {
   external validateNow(bool validateData, bool skipEvents);
   external write(container);
   external addLegend(AmLegend legend, [v]);
+  external removeLegend();
   external addTitle(String text, [num size, String color, num alpha, bool bold]); //Guessed on item types for some of these as it wasn't indicated
 }
 
@@ -204,6 +205,21 @@ class AmLegend {
 
   external num get marginBottom;
   external set marginBottom(num v);
+
+  external String get position;
+  external set position(String v);
+
+  external String get labelText;
+  external set labelText(String v);
+
+  external String get color;
+  external set color(String v);
+
+  external List<Map> get data;
+  external set data(List<Map> v);
+
+  external String get valueText;
+  external set valueText(String v);
 }
 
 @JS('AmPieChart')
