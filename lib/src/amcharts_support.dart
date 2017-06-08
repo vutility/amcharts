@@ -19,6 +19,9 @@ abstract class AxisBase {
 
   external num get dashLength ;
   external set dashLength(num v);
+  
+  external num get fontSize;
+  external set fontSize(num v);
 
   external num get gridCount ;
   external set gridCount(num v);
@@ -35,8 +38,17 @@ abstract class AxisBase {
   external bool get minorGridEnabled;
   external set minorGridEnabled(bool v);
 
-  external String get title ;
+  external String get title;
   external set title(String v);
+  
+  external bool get titleBold;
+  external set titleBold(bool v);
+  
+  external num get titleFontSize;
+  external set titleFontSize(num v);
+  
+  external num get titleRotation;
+  external set titleRotation(num v);
 
   external String get gridColor ;
   external set gridColor(String v);
