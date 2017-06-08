@@ -44,6 +44,9 @@ abstract class AxisBase {
   external bool get titleBold;
   external set titleBold(bool v);
   
+  external num get titleFontSize;
+  external set titleFontSize(num v);
+  
   external num get titleRotation;
   external set titleRotation(num v);
 
