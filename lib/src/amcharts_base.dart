@@ -223,6 +223,9 @@ class AmLegend {
 
   external List<Map> get data;
   external set data(List<Map> v);
+  
+  external num get fontSize;
+  external set fontSize(num v);
 
   external String get valueText;
   external set valueText(String v);
