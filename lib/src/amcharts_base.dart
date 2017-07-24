@@ -227,6 +227,9 @@ class AmLegend {
   external num get fontSize;
   external set fontSize(num v);
 
+  external num get markerSize;
+  external set markerSize(num v);
+
   external String get valueText;
   external set valueText(String v);
 }
